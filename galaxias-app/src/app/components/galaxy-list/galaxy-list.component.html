@@ -1,0 +1,14 @@
+<div *ngFor="let galaxy of galaxies" class="galaxy-card">
+  <div class="card-header">
+    <h3>{{ galaxy.name }}</h3>
+    <p class="subtitle">{{ galaxy.constellation }} - {{ galaxy.type }}</p>
+  </div>
+  <div class="card-content">
+    <p>Distancia: {{ galaxy.distanceMillionsLy }} millones AL</p>
+    <p>Estrellas: {{ galaxy.starsEstimate  }}</p>
+    <p>Descubierta: {{ galaxy.discoveredOn }}</p>
+  </div>
+  <div class="card-actions">
+    <button class="delete-btn" (click)="deleteGalaxy(galaxy.id)">Eliminar</button>
+  </div>
+</div>
