@@ -1,39 +1,39 @@
-<form [formGroup]="form" (ngSubmit)="submit()" class="form-container">
-  <mat-form-field appearance="fill">
-    <mat-label>Nombre</mat-label>
-    <input matInput formControlName="name">
-  </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Tipo</mat-label>
-    <mat-select formControlName="type">
-      <mat-option value="espiral">Espiral</mat-option>
-      <mat-option value="elíptica">Elíptica</mat-option>
-      <mat-option value="irregular">Irregular</mat-option>
-    </mat-select>
-  </mat-form-field>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Distancia (millones AL)</mat-label>
-    <input matInput type="number" formControlName="distanceMillionsLy">
-  </mat-form-field>
+<form class="form-container">
+  <div class="form-field">
+    <label for="name">Nombre</label>
+    <input id="name" formControlName="name">
+  </div>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Estrellas (estimadas)</mat-label>
-    <input matInput type="number" formControlName="starsEstimate">
-  </mat-form-field>
+  <div class="form-field">
+    <label for="type">Tipo</label>
+    <select id="type" formControlName="type">
+      <option value="espiral">Espiral</option>
+      <option value="elíptica">Elíptica</option>
+      <option value="irregular">Irregular</option>
+    </select>
+  </div>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Constelación</mat-label>
-    <input matInput formControlName="constellation">
-  </mat-form-field>
+  <div class="form-field">
+    <label for="distanceMillionsLy">Distancia (millones AL)</label>
+    <input id="distanceMillionsLy" type="number" formControlName="distanceMillionsLy">
+  </div>
 
-  <mat-form-field appearance="fill">
-    <mat-label>Fecha de descubrimiento</mat-label>
-    <input matInput [matDatepicker]="picker" formControlName="discoveredOn">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
+  <div class="form-field">
+    <label for="starsEstimate">Estrellas (estimadas)</label>
+    <input id="starsEstimate" type="number" formControlName="starsEstimate">
+  </div>
 
-  <button mat-raised-button color="primary" type="submit">Guardar galaxia</button>
+  <div class="form-field">
+    <label for="constellation">Constelación</label>
+    <input id="constellation" formControlName="constellation">
+  </div>
+
+  <div class="form-field">
+    <label for="discoveredOn">Fecha de descubrimiento</label>
+    <input id="discoveredOn" type="date" formControlName="discoveredOn">
+  </div>
+
+  <button type="submit">Guardar galaxia</button>
 </form>
